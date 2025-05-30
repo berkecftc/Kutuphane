@@ -1,0 +1,171 @@
+/*container*/
+.container {
+    display: flex;
+    width: 75%; 
+}
+
+/*fav*/
+#fav {
+    position: absolute;
+    right: 20%;
+    margin-top: 3rem;
+}
+
+/*image box*/
+.img-box {
+    width: 30%;
+    height: max-content;
+    border: 1px rgb(220, 209, 209) ridge;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-box img {
+    margin: 2rem 0;
+    max-height: 400px;
+}
+
+/*info box*/
+.info-box {
+    font-size: 14px;
+    width: 70%;
+    padding: 1rem 2.5rem;
+}
+
+.info-box .baslik-info {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-box .baslik-info p {
+    margin-right: 1rem;
+    font-size: 16px;
+}
+
+.info-box .detay-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.info-box .detay-group label {
+    font-weight: 800;
+    margin-right: 0.5rem;
+}
+
+/*Yorum kısmı*/
+.comment-section {
+    margin-top: 3rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.comment-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.comment-box {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-box textarea {
+    resize: vertical;
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+.comment-box button {
+    align-self: flex-start;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-box button:hover {
+    background-color: #0056b3;
+}
+
+/*Yorumlar listesi*/
+.comments-list {
+    margin-top: 2rem;
+}
+
+.comment-item {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.comment-item .author {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.comment-item .date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.comment-item .content {
+    margin-top: 0.5rem;
+}
+
+/*Mobile responsiveness*/
+@media(max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+    
+    .img-box {
+        width: 25%;
+        border: 0;
+    }
+    
+    .img-box img {
+        max-height: 250px;
+        border: 1px rgb(220, 209, 209) ridge;
+        padding: 0.5rem;
+    }
+
+    .info-box {
+        width: 75%;
+    }
+
+    .btn2 {
+        width: 125px;  
+    }
+    
+    #fav {
+        right: 12%;
+    }
+    
+    .info-box .badge {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    /* Yorumlar kısmı mobilde daha geniş olacak */
+    .comment-section {
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+}

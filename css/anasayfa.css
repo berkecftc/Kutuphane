@@ -1,0 +1,248 @@
+/* container */
+.container {
+    width: 100%;
+    margin: 2rem 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    /* flex-wrap: wrap;  -- Bu satırı kaldırdım */
+}
+
+/* başlık */
+.baslik {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10%;
+}
+
+.baslik a {
+    text-decoration: none;
+    color: grey;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.baslik a:hover {
+    color: #007bff;
+}
+
+/* kitaplar */
+.kitaplar {
+    height: 30rem;
+    width: 70%;
+    border: 1px grey solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Gölgeleme ekledik */
+}
+
+.kitaplar:hover {
+    transform: scale(1.02); /* Hoverda hafif büyüme efekti */
+}
+
+.kitaplar .kitap {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+.kitaplar .kitap a {
+    border-radius: 1rem;
+    width: 9rem;
+    height: 100%;
+    margin: 0.5rem;
+    background-position: center;
+    background-size: cover;
+    transition: all .8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölgeleme ekledik */
+}
+
+.kitaplar .kitap a:hover {
+    width: 15rem;
+    transform: scale(1.05); /* Hoverda büyüme */
+}
+
+/* yazarlar */
+.yazarlar {
+    height: 32rem;
+    width: 25%;
+    border: 1px grey solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Gölgeleme ekledik */
+    background-color: #f9f9f9;
+}
+
+.yazarlar .yazar {
+    width: 95%;
+    margin-bottom: 1rem;
+}
+
+.yazarlar .yazar a {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    margin: 0.5rem;
+    width: 100%;
+    border: 0.5px grey solid;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+    align-items: center;
+    background-color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.yazarlar .yazar a:hover {
+    background-color: #007bff;
+    color: white;
+    transform: translateY(-5px); /* Hoverda hafif yükselme efekti */
+}
+
+.yazarlar .yazar a img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.yazarlar .yazar a h5 {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Mobil uyumluluk */
+@media(max-width:990px) {
+    .container {
+        display: block;
+    }
+
+    .kitaplar {
+        height: 20rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .yazarlar {
+        height: auto;
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .yazarlar .yazar a img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .kitaplar .kitap a {
+        width: 7rem;
+        height: 10rem;
+    }
+}
+
+.favoriler {
+    height: 30rem;
+    width: 70%;
+    border: 1px grey solid;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.favoriler:hover {
+    transform: scale(1.02);
+}
+
+.favoriler .baslik {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.favoriler .kitap-liste {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 85%;
+}
+
+.favoriler .kitap-kart {
+    width: 9rem;
+    height: 100%;
+    margin: 0.5rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+.favoriler .kitap-kart:hover {
+    transform: scale(1.05);
+}
+
+.favoriler .kitap-kart img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.favoriler .kitap-kart h6 {
+    font-size: 1rem;
+    font-weight: bold;
+    min-height: 2.5rem;
+}
+
+.favoriler .kitap-kart p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.favoriler .kitap-kart a.btn {
+    margin-top: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.kitap-gorsel {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: 120px;
+    height: 120px;
+    background-image: url('../img/kitap.png'); /* klasör yapına göre düzenle */
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    
+    border-radius: 1rem;
+    
+    z-index: 9999;
+    background-image: url('../img/kitap/Solüst.png');
+}
+
+
+
+
+
+
+
+
+

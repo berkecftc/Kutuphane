@@ -1,0 +1,114 @@
+/*container*/
+.container {
+    max-width: 75%;
+    font-size: 14px;
+    display: flex;
+}
+
+/*biography-box*/
+.biyografi-box {
+    width: 30%;
+    height: max-content;
+    border: 1px rgb(220, 209, 209) ridge;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.biyografi-box img {
+    border-radius: 50%;
+    height: 250px;
+    box-shadow: -5px -5px 30px 2px red, 5px 5px 30px 2px blue;
+    margin-bottom: 1rem;
+}
+
+.biyografi-box #ozgecmis-baslik {
+    color: #999999;
+}
+
+.biyografi-box #ozgecmis-info {
+    margin: 0 1.5rem;
+}
+
+/*eserler-box*/
+.eserler-box {
+    width: 70%;    
+    height: max-content;
+    margin-left: 1rem;
+}
+
+.eserler-box h5 {
+    margin: 1rem;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.eserler-box #yonlendir {
+    text-decoration: none;
+    float: right;
+    color: grey;
+    font-size: 16px;
+}
+
+.eserler-box .eser-box {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px rgb(175, 166, 166) ridge;
+}
+
+.eserler-box .eser-box img {
+    height: 150px;
+    width: 100px;
+}
+
+.eserler-box .eser-info {
+    margin-left: 1rem;
+}
+
+.eserler-box .eser-info h5 {
+    font-weight: 700;
+}
+
+@media(max-width:800px) {
+    .container {
+        margin: 1rem;
+        max-width: 90%;
+    }
+
+    .biyografi-box img {
+        border-radius: 50%;
+        height: 125px;
+        margin-bottom: 1rem;
+        box-shadow: none;
+    }
+
+    .eserler-box {
+        width: 100%;
+    }
+
+    .eserler-box #yonlendir {
+        width: 100%;
+    }
+
+    .eserler-box .eser-box {
+        padding: 0.25rem 0.5rem;
+    }
+
+    .eserler-box .eser-info button {
+        position: absolute;
+        width: 100px;
+    }
+
+    .btn3 {
+        padding: 3px 3px;
+        height: 1.75rem;
+        font-size: 14px;
+        margin-top: -1rem;
+    }
+}

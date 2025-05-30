@@ -1,0 +1,191 @@
+/*container*/
+.container {
+    display: flex;
+    margin: 2rem auto;
+    max-width: 75%;
+    font-size: 14px;
+    height: 35rem;
+    border: 3px #243b55 solid;
+    border-radius: 2rem;
+    padding:  5rem 2rem;
+}
+
+/*sidebar*/
+.sidebar {
+    width: 25%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 0.5px grey solid;
+}
+
+.sidebar i {
+    margin-right: 0.5rem;
+}
+
+.sidebar a {
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    border-radius: 25px;
+    margin: 0.25rem auto;
+}
+
+.sidebar a:hover {
+    background-color: #3d5872;
+    font-weight: 700;
+}
+
+/*hesapbilgi*/
+.hesapbilgi, .sifredegistir, .gecmiskiralamalar, .favoriler {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 3rem 5rem;
+}
+
+.hesapbilgi .grup {
+    margin-bottom: 2rem;
+}
+
+.hesapbilgi .grup input {
+    outline: 0.5px grey solid;
+}
+
+/*sifredegister*/
+.input_group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.input_group i {
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+
+/*favoriler*/
+.favoriler {
+    color: #fff;
+    padding: 0;
+    display: block;
+    height: 20rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 1rem;
+}
+
+.kitap_box {
+    background-color:#3d5872;
+    display: flex;
+    flex-direction: row;
+    height: 175px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px rgb(220, 209, 209) ridge;
+}
+
+.kitap_box img {
+    height: 150px;
+    width: 100px;
+    margin-right: 1.5rem;
+}
+
+.kitap_box .kitap_info {
+    margin-left: 1rem;
+}
+
+.kitap_box .kitap_info h5 {
+    font-weight: 700;
+}
+
+/*geçmişkiralamalar*/
+.gecmiskiralamalar {
+    padding: 0;
+    display: block;
+    height: 20rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*popup*/
+.overlay, .resim_overlay, .select_overlay {
+    visibility: hidden;
+    transition: opacity 500ms;
+    background: rgba(0, 0, 0, 0.3);
+    position:fixed;
+    color: #000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.popup {
+    opacity: 1;
+    position: relative;
+    background: #fff;
+    width: 30%;
+    margin: 70px auto;
+    transition: all 5s ease-in-out;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    outline: 1px #243b55 solid;
+}
+
+/*gizleme*/
+.sifredegistir, .gecmiskiralamalar, .favoriler {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+}
+
+@media(max-width:800px) {
+    .container {
+        margin: 2rem auto;
+        max-width: 75%;
+        padding:  3rem 0.5rem;
+    }
+
+    .sidebar {
+        width: 35%;
+    }
+
+    .popup {
+        width: 75%;
+        margin: 70px auto;
+        padding: 20px;
+    }
+
+    .favoriler {
+        overflow-x: scroll;
+    }
+
+    .kitap_box {
+        height: 200px;
+        width: max-content;
+        padding: 0.5rem;    
+    }
+
+    .kitap_box img {
+        height: 150px;
+        width: 100px;
+        margin-right: 0.5rem;
+    }
+    
+    .kitap_box .kitap_bilgi h5 {
+        width: 5rem;
+        height: 3rem;
+        overflow: hidden;
+    }
+
+    .gecmiskiralamalar {
+        overflow-x: scroll;
+    }
+}

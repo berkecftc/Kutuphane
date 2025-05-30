@@ -1,0 +1,26 @@
+/*container*/
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*liste*/
+.liste ul {
+    list-style:none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.liste li {
+    width: 25%;
+    margin-bottom: 2rem;
+}
+
+.liste a {
+    text-decoration: none;
+    color: #000;
+}
+
+.liste a:hover {
+    color: #243b55;
+}
